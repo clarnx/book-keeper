@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection" />
+    <!--Import materialize.css-->
+    <script defer src="./assets/js/fontawesome-all.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cla Book List</title>
+
+    <style>
+        /* label focus color */
+
+        .input-field input[type=text]:focus+label {
+            color: #42a5f5 !important;
+        }
+
+        /* label underline focus color */
+
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #42a5f5 !important;
+            box-shadow: 0 1px 0 0 #42a5f5 !important;
+        }
+
+        /* valid color */
+
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #66bb6a !important;
+            box-shadow: 0 1px 0 0 #66bb6a !important;
+        }
+
+        .delete {
+            font-weight: 900;
+            font-size: 20px;
+        }
+
+        .delete:hover {
+            color: red !important;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="blue lighten-1 nav-wrapper z-depth-0">
+        <a class="brand-logo center" href=""><i class="fas fa-book"></i> Book Keeper</a>
+    </nav>
+
+    <main>
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col s12">
+
+                    <div class="card z-depth-0">
+                        <div class="card-content">
+                            <div class="row">
+                                <form autocomplete="off" id="book-form" class="col s12">
+                                    <div class="row">
+                                        <div id="alert" class="col s12">
+
+                                        </div>
+                                        <div class="input-field col s12">
+
+                                            <input placeholder="Enter Book Title" id="title" type="text">
+                                            <label for="title">Title</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12 m6">
+                                            <input placeholder="Enter Author Name" id="author" type="text">
+                                            <label for="author">Author</label>
+                                        </div>
+                                        <div class="input-field col s12 m6">
+                                            <input placeholder="Enter ISBN" id="isbn" type="text">
+                                            <label for="isbn">ISBN</label>
+                                        </div>
+                                    </div>
+
+                                    <button  type="submit" class="btn blue waves-effect lighten-1 z-depth-0 col s12 m3" id="submit-btn">Add book</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="table-field" class="row">
+                            <div class="col s12">
+                                <div class="card-action">
+                                    <h5><i class="fas fa-list"></i> Books</h5>
+                            
+                                    <table class="responsive-table highlight">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Author</th>
+                                                <th>ISBN</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="table-list">
+                                            <!-- <tr>
+                                                <td>Alvin</td>
+                                                <td>Eclair</td>
+                                                <td>$0.87</td>
+                                                <td><a class="delete right" href="#">&Cross;</a></td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <!-- Modal Trigger -->
+    <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
+
+    <!-- Modal Structure -->
+
+    
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="./assets/js/materialize.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>
